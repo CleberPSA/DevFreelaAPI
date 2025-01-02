@@ -32,9 +32,6 @@ O **DevFreela** é uma API construída para conectar desenvolvedores com cliente
 
 - **.NET Core** (para desenvolvimento da API)
 - **ASP.NET Core** (para construção de endpoints RESTful)
-- **Entity Framework** (para acesso a dados)
-- **Injeção de Dependência** (para modularidade e testes)
-- **Swagger** (para documentação da API)
 
 ## Instalação
 
