@@ -20,18 +20,21 @@ O **DevFreela** é uma API construída para conectar desenvolvedores com cliente
 - **Controllers e Actions**: Implementação de controllers e actions para gerenciar as operações de criação, leitura, atualização e exclusão (CRUD).
 - **Criação dos Endpoints CRUD**: Desenvolvimento de endpoints para CRUD de usuários, projetos, propostas e tarefas.
 - **Injeção de Dependência**: Aplicação do padrão de Injeção de Dependência para uma arquitetura limpa e testável.
-
-## Próximos Passos
-
 - **Integração com Banco de Dados**: Implementação da persistência de dados utilizando um banco de dados relacional.
 - **Entity Framework**: Integração com o Entity Framework para mapeamento objeto-relacional (ORM) e operações no banco de dados.
 - **Migrations**: Implementação de migrations para o controle da evolução do esquema do banco de dados.
 - **Paginação**: Adição de suporte à paginação para melhorar o desempenho em grandes listas de projetos, usuários, propostas e tarefas.
 
+## Próximos Passos
+
+- **Arquitetura Limpa**: Estrutura de código mais organizada, escalável e mantível.
+
+
 ## Tecnologias Utilizadas
 
 - **.NET Core** (para desenvolvimento da API)
 - **ASP.NET Core** (para construção de endpoints RESTful)
+- **Entity Framework** (um framework de acesso a dados)
 
 ## Instalação
 
@@ -64,5 +67,8 @@ O **DevFreela** é uma API construída para conectar desenvolvedores com cliente
     ```
 
 A API estará disponível em `http://localhost:5000` por padrão.
+
+
+
 
 
