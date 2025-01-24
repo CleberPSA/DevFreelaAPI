@@ -66,7 +66,7 @@ O **DevFreela** é uma API construída para conectar desenvolvedores com cliente
     dotnet run
     ```
 
-A API estará disponível em `http://localhost:5000` por padrão.
+A API estará disponível em `http://localhost:5297` por padrão.
 
 
 
