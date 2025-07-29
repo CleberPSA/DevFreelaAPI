@@ -1,74 +1,77 @@
-# DevFreela
+# 💼 DevFreela
 
-O **DevFreela** é uma API que conecta desenvolvedores com clientes para desenvolver projetos de programação, como sites, APIs, entre outros. Este projeto visa facilitar a comunicação e a execução de tarefas entre desenvolvedores e clientes, fornecendo uma plataforma para gerenciar projetos e suas etapas de desenvolvimento.
+O **DevFreela** é uma API RESTful desenvolvida em .NET para conectar desenvolvedores com clientes interessados em contratar projetos de software, como sites, sistemas e APIs. O objetivo é oferecer uma estrutura para gerenciamento de usuários, propostas e projetos, simulando uma plataforma freelance.
 
-## Índice
+---
 
-- [Descrição](#descrição)
-- [Funcionalidades](#funcionalidades)
-- [Próximos Passos](#próximos-passos)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
+## 🧩 Problema
 
-## Descrição
+Simular um sistema de intermediação entre clientes e desenvolvedores, com funcionalidades como cadastro de usuários, criação de projetos, envio de propostas e controle de status.
 
-O **DevFreela** é uma API construída para conectar desenvolvedores com clientes que buscam realizar projetos de programação. A API oferece uma interface simples para gerenciar tarefas, propostas e projetos, facilitando a colaboração entre desenvolvedores e clientes.
+---
 
-## Funcionalidades
+## 💡 Solução
 
-- **Fundamentos da API**: Estrutura básica de uma API RESTful para gerenciar projetos de programação.
-- **Controllers e Actions**: Implementação de controllers e actions para gerenciar as operações de criação, leitura, atualização e exclusão (CRUD).
-- **Criação dos Endpoints CRUD**: Desenvolvimento de endpoints para CRUD de usuários, projetos, propostas e tarefas.
-- **Injeção de Dependência**: Aplicação do padrão de Injeção de Dependência para uma arquitetura limpa e testável.
-- **Integração com Banco de Dados**: Implementação da persistência de dados utilizando um banco de dados relacional.
-- **Entity Framework**: Integração com o Entity Framework para mapeamento objeto-relacional (ORM) e operações no banco de dados.
-- **Migrations**: Implementação de migrations para o controle da evolução do esquema do banco de dados.
-- **Paginação**: Adição de suporte à paginação para melhorar o desempenho em grandes listas de projetos, usuários, propostas e tarefas.
+Desenvolvimento de uma API escalável, com padrões modernos do .NET, aplicação de conceitos como injeção de dependência, migrations, paginação e separação clara de responsabilidades com uso do Entity Framework Core.
 
-## Próximos Passos
+---
 
-- **Arquitetura Limpa**: Estrutura de código mais organizada, escalável e mantível.
+## ✨ Funcionalidades
 
+- CRUD de **usuários**, **projetos**, **propostas** e **tarefas**
+- Injeção de dependência com serviços desacoplados
+- Controle de persistência com **Entity Framework**
+- Aplicação de **migrations** para versionamento do banco de dados
+- Suporte à **paginação** em endpoints de listagem
+- Validações básicas e tratamento de erros
 
-## Tecnologias Utilizadas
+---
 
-- **.NET Core** (para desenvolvimento da API)
-- **ASP.NET Core** (para construção de endpoints RESTful)
-- **Entity Framework** (um framework de acesso a dados)
+## 🛠️ Tecnologias Utilizadas
 
-## Instalação
+- [.NET 6](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server
+
+---
+
+## ⚙️ Decisões Técnicas
+
+- Optei por uma arquitetura simples com **Controllers + Services**, separando lógica de negócio da exposição da API.
+- Utilizei **EF Core** pela integração natural com .NET e facilidade nas migrations.
+- Organização por pastas: `Controllers`, `Services`, `Repositories`, `Models`, `ViewModels`.
+
+---
+
+## ⚖️ Trade-offs
+
+- O projeto ainda não implementa autenticação/autorização (como JWT).
+- Não há testes automatizados neste momento.
+- A API está sem documentação Swagger configurada (previsto para próximos passos).
+
+---
+
+## 🚀 Como Executar
 
 ### Pré-requisitos
 
-- **.NET Core SDK** (recomendado a versão 6.0 ou superior)
-- **Visual Studio** ou **VS Code** (para desenvolvimento)
-- **SQL Server** ou outro banco de dados (para persistência dos dados, quando integrado)
+- [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+- SQL Server (local ou Docker)
+- Visual Studio ou VS Code
 
-### Instalando
+### Passo a passo
 
-1. Clone o repositório:
-    ```bash
-    git clone https://github.com/usuario/devfreela.git
-    ```
+```bash
+# Clone o projeto
+git clone https://github.com/usuario/devfreela.git
+cd devfreela
 
-2. Acesse a pasta do projeto:
-    ```bash
-    cd devfreela
-    ```
+# Restaure as dependências
+dotnet restore
 
-3. Restaure as dependências do projeto:
-    ```bash
-    dotnet restore
-    ```
+# Execute as migrations (opcional, se usar banco real)
+dotnet ef database update
 
-4. Execute a aplicação:
-    ```bash
-    dotnet run
-    ```
-
-A API estará disponível em `http://localhost:5297` por padrão.
-
-
-
-
-
+# Execute a aplicação
+dotnet run
